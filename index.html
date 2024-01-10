@@ -1,13 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <script type="module" src="/main.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header>
+            <nav-wrapper>
+                <h1>Where in the World</h1>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                </label>
+            </nav-wrapper>
+        </header>
+        <hr />
+
+        <main>
+            <div>
+                <input type="text" placeholder="Search For A Country" />
+                <select name="continents" id="continentSelection">
+                    <!-- mit Js dynamische Option einfügen -->
+                </select>
+            </div>
+            <grid-body>
+                <section>
+                    <figure></figure>
+                </section>
+            </grid-body>
+        </main>
+    </body>
 </html>
