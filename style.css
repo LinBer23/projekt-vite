@@ -2,13 +2,12 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    --font-color: rgba(255, 255, 255, 0.87);
-    --backColor: #242424;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --font-color: rgba(255, 255, 255, 0.87);
+    --backColor: #242424;
 }
 /* Scrollbar */
 /* ::-webkit-scrollbar-track {
@@ -26,15 +25,14 @@
 grid-body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 10px;
-    grid-template-rows: auto;
-    background-color: red;
-    width: 100%;
+    gap: 15px;
+    /*  width: 100%; */
 }
 hr {
     margin: 20px 0;
     width: 100%;
 }
+/* Slider..Switch dark/ light Mode */
 nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -93,16 +91,9 @@ nav-wrapper {
 }
 
 div {
+    position:relative;
     display: flex;
     justify-content: space-between;
-}
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
 }
 
 body {
@@ -111,28 +102,64 @@ body {
     width: 90%;
     min-width: 320px;
     min-height: 100vh;
-    /*  display: flex; */
-    /* place-items: center; */
 }
 
 input {
-    width: 200px;
+    width: 300px;
+    height: 70px;
     text-align: center;
     padding-inline: 2rem;
-    height: 40px;
     border-radius: 10px;
     color: rgb(169, 167, 167);
     border: none;
     background-color: #213547;
-    color: olivedrab;
+    color: var(--font-color);
+    font-size: 1.3rem;
+    margin-top: 30px 0;
 }
+iconify-icon {
+    position: absolute;
+    top:40%;    
+}
+
 select {
-    width: 200px;
-    height: 40px;
+    width: 300px;
+    height: 70px;
     background-color: #213547;
     text-align: center;
     border-radius: 10px;
     color: rgb(169, 167, 167);
     border-radius: 10px;
     border: none;
+    margin-top: 30px 0;
+    font-size: 1.3rem;
+}
+section {
+    margin-top: 30px;
+    background-color: #213547;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    & figure {
+        background-color: #213547;
+        & img {
+            width: 100%;
+            background-color: #213547;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        > p {
+            padding: 0 30px;
+            background-color: #213547;
+            & b {
+                background-color: #213547;
+            }
+        }
+        & h2 {
+            background-color: #213547;
+            padding: 0 30px;
+        }
+    }
 }

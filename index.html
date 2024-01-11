@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <script type="module" src="/main.js" defer></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="./style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
     </head>
@@ -21,15 +23,22 @@
 
         <main>
             <div>
-                <input type="text" placeholder="Search For A Country" />
+                <iconify-icon icon="clarity:search-line"></iconify-icon>
+                <input
+                    type="text"
+                    name="countries"
+                    id="countries"
+                    placeholder="Search For A Country"
+                   
+                />
                 <select name="continents" id="continentSelection">
-                    <!-- mit Js dynamische Option einfügen -->
+                   <option value="africa">Africa</option>
+                   <option value="europe">Europe</option>
+                 
                 </select>
             </div>
             <grid-body>
-                <section>
-                    <figure></figure>
-                </section>
+                <!-- mit Js dynamisch Countries hinzufügen -->
             </grid-body>
         </main>
     </body>

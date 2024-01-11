@@ -1,38 +1,38 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+window.addEventListener("DOMContentLoaded", async () => {
+        const RESPONSE = await fetch("https://restcountries.com/v3.1/all");
+        const responseJson = await RESPONSE.json();// json()(von json) parst in array
+        const gridWrapper = document.querySelector("grid-body");
+        console.log(responseJson[0]);
+            for (const land of responseJson) {
+                const item = document.createElement("section");
 
-window.addEventListener('DOMContentLoaded', async() =>{
-  const   RESPONSE = await fetch('./data.json')
-  async function fetchDataObject (){
+                item.innerHTML += `<figure><img src=${land.flags.png} alt="flag of ">
+                <h2>${land.name.common}</h2>
+                <p><b>Population: </b>${land.population.toLocaleString()}</p>
+                <p><b>Region: </b> ${land.region} 
+                <p><b>Capital: </b>${land.capital}</figure>`;
+                gridWrapper.appendChild(item);
+                }
+                
 
-  }
+});
+/* capital name */
+const inputField = document.getElementById("countries")
+const selectField =document.getElementById("continentSelection")
+
+inputField.addEventListener("input",(event) =>{
+   const inputValue = event.target.value;
 })
-const searchField = document.getElementById("search")
-/* const searchInput = event.target.value */
+
+selectField.addEventListener("change",(event) =>{
+    const valueSelect = event.target.value
+    console.log(valueSelect)
+})
 
 
 
 
 
 
-/* document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector('#counter')) */
+
