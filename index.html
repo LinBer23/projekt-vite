@@ -13,28 +13,29 @@
         <header>
             <nav-wrapper>
                 <h1>Where in the World</h1>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                </label>
+                <right-side>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Dark-Mode</span>
+                </right-side>
             </nav-wrapper>
         </header>
         <hr />
 
         <main>
             <div>
-                <iconify-icon icon="clarity:search-line"></iconify-icon>
+                <iconify-icon icon="clarity:search-line" width="30" height="30"></iconify-icon>
                 <input
                     type="text"
                     name="countries"
                     id="countries"
                     placeholder="Search For A Country"
-                   
                 />
                 <select name="continents" id="continentSelection">
-                   <option value="africa">Africa</option>
-                   <option value="europe">Europe</option>
-                 
+                    <option value="africa">Africa</option>
+                    <option value="europe">Europe</option>
                 </select>
             </div>
             <grid-body>
